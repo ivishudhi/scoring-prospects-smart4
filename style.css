@@ -1,0 +1,157 @@
+/* Identité visuelle Smart4 Engineering pour l'application de scoring */
+
+:root {
+    --s4-navy: #0c2d55;
+    --s4-navy-light: #133d70;
+    --s4-orange: #e8792a;          /* réservé aux remplissages larges (jauge, barre) */
+    --s4-orange-texte: #c05a1a;    /* variante foncée : contraste AA suffisant pour du texte/traits */
+    --s4-succes: #0b5c46;          /* vert foncé : contraste AA sur fond blanc */
+    --s4-succes-fond: #e1f5ee;
+    --s4-alerte: #a3401d;          /* rouge-orangé foncé : contraste AA sur fond blanc */
+    --s4-alerte-fond: #faece7;
+    --s4-fond-carte: #ffffff;
+    --s4-bordure: #d5d9df;
+}
+
+/* Focus clavier : ne jamais masquer l'anneau de focus par défaut de Streamlit */
+button:focus-visible,
+select:focus-visible,
+input:focus-visible {
+    outline: 3px solid var(--s4-navy-light) !important;
+    outline-offset: 2px;
+}
+
+.block-container {
+    padding-top: 4rem;
+    max-width: 780px;
+}
+
+/* En-tête */
+.s4-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1.5rem;
+}
+.s4-logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    background: var(--s4-navy);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 15px;
+    flex-shrink: 0;
+}
+/* min-width: 0 evite que le texte deborde et soit coupe dans un conteneur flex etroit */
+.s4-header-texte {
+    min-width: 0;
+}
+.s4-header-titre {
+    font-weight: 600;
+    font-size: 18px;
+    margin: 0;
+    color: var(--s4-navy);
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+.s4-header-sous-titre {
+    font-size: 13px;
+    color: #6b7280;
+    margin: 0;
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
+/* Cartes */
+.s4-card {
+    background: var(--s4-fond-carte);
+    border: 1px solid var(--s4-bordure);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+}
+.s4-card-titre {
+    font-size: 13px;
+    font-weight: 600;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin: 0 0 12px 0;
+}
+
+/* Badge de classification : icône + texte, jamais la couleur seule (accessibilité) */
+.s4-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+}
+.s4-badge-fort { background: var(--s4-succes-fond); color: var(--s4-succes); }
+.s4-badge-confirmer { background: #faeeda; color: #6b4108; }
+.s4-badge-risque { background: var(--s4-alerte-fond); color: var(--s4-alerte); }
+
+/* Score */
+.s4-score {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--s4-navy);
+}
+
+/* Jauge circulaire (SVG) */
+.s4-gauge-valeur {
+    font-size: 17px;
+    font-weight: 700;
+    fill: var(--s4-navy);
+}
+
+/* Facteurs d'influence : icône + libellé + mot explicite (pas la couleur seule) */
+.s4-facteur {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+.s4-facteur-libelle { flex: 1; color: #1a1a1a; }
+.s4-facteur-favorise { color: var(--s4-succes); font-weight: 600; font-size: 12px; }
+.s4-facteur-defavorise { color: var(--s4-alerte); font-weight: 600; font-size: 12px; }
+
+/* Bascule "grand texte" (accessibilité) */
+.s4-large-text, .s4-large-text p, .s4-large-text span, .s4-large-text label {
+    font-size: 115% !important;
+}
+
+/* Bouton principal */
+div.stButton > button[kind="primary"] {
+    background: var(--s4-orange);
+    border: none;
+    font-weight: 600;
+}
+div.stButton > button[kind="primary"]:hover {
+    background: #cf6a20;
+}
+
+/* Métriques d'historique */
+.s4-metric {
+    background: #f7f8fa;
+    border-radius: 8px;
+    padding: 0.9rem 1rem;
+}
+.s4-metric-label {
+    font-size: 12px;
+    color: #6b7280;
+    margin: 0 0 4px 0;
+}
+.s4-metric-valeur {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--s4-navy);
+    margin: 0;
+}

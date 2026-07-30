@@ -1,0 +1,107 @@
+{
+  "entityTrig_map": {
+    "entité 1": 1,
+    "entité 2": 2,
+    "entité 3": 3,
+    "entité 4": 4,
+    "entité 5": 5,
+    "entité 6": 6,
+    "entité 8": 8,
+    "entité 9": 9,
+    "entité 10": 10
+  },
+  "priority_map": {
+    "P5_LOWEST": 0,
+    "P4_LOW": 1,
+    "P3_NORMAL": 2,
+    "P2_HIGH": 3,
+    "P1_HIGHEST": 4
+  },
+  "filiale_stats": {
+    "1": {
+      "nb_consultants_filiale": 12750,
+      "exp_moyenne_filiale": 10,
+      "nb_certifications_total": 3476,
+      "nb_certifications_actives": 3321,
+      "nb_consultants_certifies": 1419,
+      "nb_types_certifications_distincts": 2600
+    },
+    "2": {
+      "nb_consultants_filiale": 6948,
+      "exp_moyenne_filiale": 10,
+      "nb_certifications_total": 1261,
+      "nb_certifications_actives": 1223,
+      "nb_consultants_certifies": 374,
+      "nb_types_certifications_distincts": 881
+    },
+    "3": {
+      "nb_consultants_filiale": 10599,
+      "exp_moyenne_filiale": 12,
+      "nb_certifications_total": 11912,
+      "nb_certifications_actives": 11524,
+      "nb_consultants_certifies": 2801,
+      "nb_types_certifications_distincts": 9050
+    },
+    "4": {
+      "nb_consultants_filiale": 5107,
+      "exp_moyenne_filiale": 13,
+      "nb_certifications_total": 48,
+      "nb_certifications_actives": 48,
+      "nb_consultants_certifies": 12,
+      "nb_types_certifications_distincts": 38
+    },
+    "5": {
+      "nb_consultants_filiale": 3112,
+      "exp_moyenne_filiale": 14,
+      "nb_certifications_total": 911,
+      "nb_certifications_actives": 887,
+      "nb_consultants_certifies": 202,
+      "nb_types_certifications_distincts": 827
+    },
+    "6": {
+      "nb_consultants_filiale": 293,
+      "exp_moyenne_filiale": 9,
+      "nb_certifications_total": 197,
+      "nb_certifications_actives": 194,
+      "nb_consultants_certifies": 107,
+      "nb_types_certifications_distincts": 141
+    },
+    "8": {
+      "nb_consultants_filiale": 755,
+      "exp_moyenne_filiale": 16,
+      "nb_certifications_total": 19,
+      "nb_certifications_actives": 19,
+      "nb_consultants_certifies": 4,
+      "nb_types_certifications_distincts": 19
+    },
+    "9": {
+      "nb_consultants_filiale": 1922,
+      "exp_moyenne_filiale": 9,
+      "nb_certifications_total": 57,
+      "nb_certifications_actives": 47,
+      "nb_consultants_certifies": 26,
+      "nb_types_certifications_distincts": 42
+    },
+    "10": {
+      "nb_consultants_filiale": 21,
+      "exp_moyenne_filiale": 20,
+      "nb_certifications_total": 2,
+      "nb_certifications_actives": 2,
+      "nb_consultants_certifies": 2,
+      "nb_types_certifications_distincts": 2
+    }
+  },
+  "features": [
+    "duree_mission",
+    "priority_ordinal",
+    "ecart_creation_demarrage",
+    "entityTrig_code",
+    "nb_consultants_filiale",
+    "exp_moyenne_filiale",
+    "nb_certifications_total",
+    "nb_certifications_actives",
+    "nb_consultants_certifies",
+    "nb_types_certifications_distincts"
+  ],
+  "seuil_optimal": 0.35
+}
