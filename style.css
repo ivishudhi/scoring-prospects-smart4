@@ -1,19 +1,20 @@
 /* Identité visuelle Smart4 Engineering pour l'application de scoring */
 
+/* couleurs du groupe Smart4 Engineering */
 :root {
     --s4-navy: #0c2d55;
     --s4-navy-light: #133d70;
-    --s4-orange: #e8792a;          /* réservé aux remplissages larges (jauge, barre) */
-    --s4-orange-texte: #c05a1a;    /* variante foncée : contraste AA suffisant pour du texte/traits */
-    --s4-succes: #0b5c46;          /* vert foncé : contraste AA sur fond blanc */
+    --s4-orange: #e8792a;
+    --s4-orange-texte: #c05a1a;
+    --s4-succes: #0b5c46;
     --s4-succes-fond: #e1f5ee;
-    --s4-alerte: #a3401d;          /* rouge-orangé foncé : contraste AA sur fond blanc */
+    --s4-alerte: #a3401d;
     --s4-alerte-fond: #faece7;
     --s4-fond-carte: #ffffff;
     --s4-bordure: #d5d9df;
 }
 
-/* Focus clavier : ne jamais masquer l'anneau de focus par défaut de Streamlit */
+/* on garde le focus visible au clavier, sinon inaccessible sans souris */
 button:focus-visible,
 select:focus-visible,
 input:focus-visible {
@@ -26,7 +27,7 @@ input:focus-visible {
     max-width: 780px;
 }
 
-/* En-tête */
+/* en-tete avec le logo */
 .s4-header {
     display: flex;
     align-items: center;
@@ -46,7 +47,6 @@ input:focus-visible {
     font-size: 15px;
     flex-shrink: 0;
 }
-/* min-width: 0 evite que le texte deborde et soit coupe dans un conteneur flex etroit */
 .s4-header-texte {
     min-width: 0;
 }
@@ -66,7 +66,7 @@ input:focus-visible {
     overflow-wrap: break-word;
 }
 
-/* Cartes */
+/* cartes blanches utilisees partout dans l'appli */
 .s4-card {
     background: var(--s4-fond-carte);
     border: 1px solid var(--s4-bordure);
@@ -83,7 +83,7 @@ input:focus-visible {
     margin: 0 0 12px 0;
 }
 
-/* Badge de classification : icône + texte, jamais la couleur seule (accessibilité) */
+/* badge de resultat, toujours icone + texte pour rester lisible sans la couleur */
 .s4-badge {
     display: inline-flex;
     align-items: center;
@@ -97,21 +97,20 @@ input:focus-visible {
 .s4-badge-confirmer { background: #faeeda; color: #6b4108; }
 .s4-badge-risque { background: var(--s4-alerte-fond); color: var(--s4-alerte); }
 
-/* Score */
 .s4-score {
     font-size: 28px;
     font-weight: 700;
     color: var(--s4-navy);
 }
 
-/* Jauge circulaire (SVG) */
+/* jauge circulaire du score */
 .s4-gauge-valeur {
     font-size: 17px;
     font-weight: 700;
     fill: var(--s4-navy);
 }
 
-/* Facteurs d'influence : icône + libellé + mot explicite (pas la couleur seule) */
+/* facteurs d'influence du score, meme logique icone + mot */
 .s4-facteur {
     display: flex;
     align-items: center;
@@ -123,12 +122,12 @@ input:focus-visible {
 .s4-facteur-favorise { color: var(--s4-succes); font-weight: 600; font-size: 12px; }
 .s4-facteur-defavorise { color: var(--s4-alerte); font-weight: 600; font-size: 12px; }
 
-/* Bascule "grand texte" (accessibilité) */
+/* option "texte agrandi" dans la sidebar */
 .s4-large-text, .s4-large-text p, .s4-large-text span, .s4-large-text label {
     font-size: 115% !important;
 }
 
-/* Bouton principal */
+/* bouton principal "Qualifier ce prospect" */
 div.stButton > button[kind="primary"] {
     background: var(--s4-orange);
     border: none;
@@ -138,7 +137,7 @@ div.stButton > button[kind="primary"]:hover {
     background: #cf6a20;
 }
 
-/* Métriques d'historique */
+/* metriques affichees dans l'historique */
 .s4-metric {
     background: #f7f8fa;
     border-radius: 8px;
