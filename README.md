@@ -22,12 +22,19 @@ Pour rappel, dès l'extraction, les identifiants sensibles (mission, workspace) 
 ## Structure du dépôt
 
 -> app.py application Streamlit
+
 -> scoring.py fonctions de scoring et de calcul SHAP
+
 -> model_scoring_prospects.joblib modèle entraîné
+
 -> mappings.json mappings des variables catégorielles (entités, priorité...)
+
 -> win_ratio_par_entite.csv taux de succès historique par entité
+
 -> style.css style et esthétique de l'application
+
 -> requirements.txt
+
 -> README.md
 
 ## Pipeline
